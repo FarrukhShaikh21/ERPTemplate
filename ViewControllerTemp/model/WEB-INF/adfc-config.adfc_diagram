@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View3">
+      <property
+         name="activityId">DEMP_D002</property>
+      <property
+         name="page">/DEMP_D002.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>DEMP_D002&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">true</property>
+      <property
+         name="y">180.09766</property>
+      <property
+         name="x">356.01562</property>
+   </View>
+   <View
+      id="View4">
+      <property
+         name="activityId">TempDemo</property>
+      <property
+         name="page">/TempDemo.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>TempDemo&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">90.09766</property>
+      <property
+         name="x">131.3418</property>
+   </View>
+   <WildcardControlFlowRule
+      id="WildcardControlFlowRule7">
+      <property
+         name="activityId">*</property>
+      <property
+         name="y">15.298828</property>
+      <property
+         name="x">329.0</property>
+   </WildcardControlFlowRule>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="WildcardControlFlowRule7"
+      to="View4">
+      <property
+         name="fromOutcome">ERP-ACT-SCH_0005</property>
+      <property
+         name="sdm:polyPoints">L50,293.0,15.448242,172.3418,89.74707,R50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="WildcardControlFlowRule7"
+      to="View3">
+      <property
+         name="fromOutcome">ERP-ACT-SCH_0003</property>
+      <property
+         name="sdm:polyPoints">B50,329.0,58.495773,356.01562,125.199554,T50</property>
+   </ControlFlowCase>
+</SDM>
