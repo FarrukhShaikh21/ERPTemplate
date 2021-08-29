@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ERPTemModule"
+  Version="12.1.3.2.1"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="erptemplate.modeltemp.temam.ERPTemModule_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewUsage
+    Name="VwSysUsersModuleReportRO"
+    ViewObjectName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO">
+    <ViewCriteriaUsage
+      Name="VwSysUsersModuleActionCatReportVC"
+      FullName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO.VwSysUsersModuleActionCatReportVC"/>
+    <ViewCriteriaUsage
+      Name="VwSysUsersModuleCategoryReportVC"
+      FullName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO.VwSysUsersModuleCategoryReportVC"/>
+    <ViewCriteriaUsage
+      Name="VwSysUsersModuleUserWiseVC"
+      FullName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO.VwSysUsersModuleUserWiseVC"/>
+  </ViewUsage>
+  <ViewUsage
+    Name="VwSysUsersModuleSetupRO"
+    ViewObjectName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO">
+    <ViewCriteriaUsage
+      Name="VwSysUsersModuleActionCatSetupVC"
+      FullName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO.VwSysUsersModuleActionCatSetupVC"/>
+    <ViewCriteriaUsage
+      Name="VwSysUsersModuleUserWiseVC"
+      FullName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO.VwSysUsersModuleUserWiseVC"/>
+  </ViewUsage>
+  <ViewUsage
+    Name="VwSysUsersModuleTransRO"
+    ViewObjectName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO">
+    <ViewCriteriaUsage
+      Name="VwSysUsersModuleActionCatTransVC"
+      FullName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO.VwSysUsersModuleActionCatTransVC"/>
+    <ViewCriteriaUsage
+      Name="VwSysUsersModuleUserWiseVC"
+      FullName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO.VwSysUsersModuleUserWiseVC"/>
+  </ViewUsage>
+  <ViewUsage
+    Name="SysUsersProfileRO"
+    ViewObjectName="erptemplate.modeltemp.temqvo.SysUsersProfileQVO"/>
+  <ViewUsage
+    Name="VwERPGlobalSearchRO"
+    ViewObjectName="erptemplate.modeltemp.temqvo.VwERPGlobalSearchQVO"/>
+  <ViewUsage
+    Name="VwSysGlobalSearchActionRO"
+    ViewObjectName="erptemplate.modeltemp.temqvo.VwSysGlobalSearchActionQVO"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="erptemplate.modeltemp.ModelTempBundle"/>
+  </ResourceBundle>
+</AppModule>
