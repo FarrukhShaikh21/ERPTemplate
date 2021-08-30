@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ModelTemp"
+  Version="12.1.3.10.47"
+  SeparateXMLFiles="true"
+  PackageName="erptemplate.modeltemp">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../../ModelTemp.jpr"/>
+    <Attr Name="_jbo.TypeMapEntries" Value="Java"/>
+    <Attr Name="_appModuleNames0" Value="erptemplate.modeltemp.temam.ERPTemModule"/>
+    <Attr Name="_useAnsiJoinSyntax" Value="true"/>
+    <Attr Name="_jbo.SQLBuilder" Value="SQL92"/>
+    <Attr Name="_NamedConnection" Value="ERPTemplateConn"/>
+  </DesignTime>
+  <Containee
+    Name="temam"
+    PackageName="erptemplate.modeltemp.temam"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="temqvo"
+    PackageName="erptemplate.modeltemp.temqvo"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+</JboProject>

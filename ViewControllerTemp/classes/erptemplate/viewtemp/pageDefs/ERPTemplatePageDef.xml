@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.47" id="ERPTemplatePageDef"
+                Package="erptemplate.viewtemp.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VwSysUsersModuleSetupRO" RangeSize="25" DataControl="ERPTemModuleDataControl"
+              id="VwSysUsersModuleSetupROIterator" ChangeEventPolicy="none"/>
+    <iterator Binds="VwSysUsersModuleTransRO" RangeSize="25" DataControl="ERPTemModuleDataControl"
+              id="VwSysUsersModuleTransROIterator" ChangeEventPolicy="none"/>
+    <iterator Binds="VwSysUsersModuleReportRO" RangeSize="25" DataControl="ERPTemModuleDataControl"
+              id="VwSysUsersModuleReportROIterator" ChangeEventPolicy="none"/>
+    <iterator Binds="SysUsersProfileRO" RangeSize="25" DataControl="ERPTemModuleDataControl"
+              id="SysUsersProfileROIterator"/>
+    <iterator Binds="VwERPGlobalSearchRO" RangeSize="10" DataControl="ERPTemModuleDataControl"
+              id="VwERPGlobalSearchROIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="VwSysUsersModuleSetupROIterator" id="VwSysUsersModuleSetupRO" ChangeEventPolicy="none">
+      <nodeDefinition DefName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO" Name="VwSysUsersModuleSetupRO0">
+        <AttrNames>
+          <Item Value="ActionName"/>
+          <Item Value="ActionRuntime"/>
+          <Item Value="AllowAdd"/>
+          <Item Value="AllowCancel"/>
+          <Item Value="AllowDelete"/>
+          <Item Value="AllowEdit"/>
+          <Item Value="AllowEditOther"/>
+          <Item Value="AllowSupervise"/>
+          <Item Value="AllowUnsupervise"/>
+          <Item Value="IsAllow"/>
+          <Item Value="ModuleAction"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="VwSysUsersModuleTransROIterator" id="VwSysUsersModuleTransRO" ChangeEventPolicy="none">
+      <nodeDefinition DefName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO" Name="VwSysUsersModuleTransRO0">
+        <AttrNames>
+          <Item Value="ActionName"/>
+          <Item Value="ActionRuntime"/>
+          <Item Value="AllowAdd"/>
+          <Item Value="AllowCancel"/>
+          <Item Value="AllowDelete"/>
+          <Item Value="AllowEdit"/>
+          <Item Value="AllowEditOther"/>
+          <Item Value="AllowSupervise"/>
+          <Item Value="AllowUnsupervise"/>
+          <Item Value="ModuleAction"/>
+          <Item Value="IsAllow"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="VwSysUsersModuleReportROIterator" id="VwSysUsersModuleReportRO" ChangeEventPolicy="none">
+      <nodeDefinition DefName="erptemplate.modeltemp.temqvo.VwSysUsersModuleQVO" Name="VwSysUsersModuleReportRO0">
+        <AttrNames>
+          <Item Value="ActionName"/>
+          <Item Value="ActionRuntime"/>
+          <Item Value="AllowAdd"/>
+          <Item Value="AllowCancel"/>
+          <Item Value="AllowDelete"/>
+          <Item Value="AllowEdit"/>
+          <Item Value="AllowEditOther"/>
+          <Item Value="AllowSupervise"/>
+          <Item Value="AllowUnsupervise"/>
+          <Item Value="IsAllow"/>
+          <Item Value="ModuleAction"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="SysUsersProfileROIterator" id="MobileNo">
+      <AttrNames>
+        <Item Value="MobileNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SysUsersProfileROIterator" id="PhoneNo">
+      <AttrNames>
+        <Item Value="PhoneNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SysUsersProfileROIterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SysUsersProfileROIterator" id="GenderDescription">
+      <AttrNames>
+        <Item Value="GenderDescription"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SysUsersProfileROIterator" id="LoginId">
+      <AttrNames>
+        <Item Value="LoginId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SysUsersProfileROIterator" id="Cityname">
+      <AttrNames>
+        <Item Value="Cityname"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SysUsersProfileROIterator" id="UserName">
+      <AttrNames>
+        <Item Value="UserName"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="VwERPGlobalSearchROIterator" id="VwERPGlobalSearchRO">
+      <nodeDefinition DefName="erptemplate.modeltemp.temqvo.VwERPGlobalSearchQVO" Name="VwERPGlobalSearchRO0">
+        <AttrNames>
+          <Item Value="Pk"/>
+          <Item Value="ActionName"/>
+          <Item Value="ActionRuntime"/>
+          <Item Value="Erpbtfname"/>
+          <Item Value="LocationId"/>
+          <Item Value="ModuleAction"/>
+          <Item Value="ModuleId"/>
+          <Item Value="SearchString"/>
+          <Item Value="TransactionId"/>
+          <Item Value="DisplayString"/>
+          <Item Value="CompanyId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="erptemplate.modeltemp.temam.ERPTemModule">
+      <AppModuleConfig name="17B8759BD61" IsLazyLoadingTrue="true" DBconnection="java:comp/env/jdbc/ERPTemplateConnDS" ApplicationName="erptemplate.modeltemp.temam.ERPTemModule" jbo.project="erptemplate.modeltemp.ModelTemp" BC4JConfigName="ERPTemModuleLocal" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DeployPlatform="LOCAL" JDBCName="ERPTemplateConn">
+         <Database jbo.SQLBuilder="SQL92" jbo.TypeMapEntries="Java" jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="erptemplate.modeltemp.temam.ERPTemModule"/>
+         <Tester FullProxyInterfaceName="erptemplate.modeltemp.temam.common.ERPTemModule"/>
+         <Custom ns0:LastUsedConfiguration="ERPTemModuleLocal" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:JDBCDataSource="java:comp/env/jdbc/ERPTemplateConnDS" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

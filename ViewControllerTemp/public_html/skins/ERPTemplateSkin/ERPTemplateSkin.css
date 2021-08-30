@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+.ERPTemplateHeader
+{
+background-color:#ecf1cd;
+}
+
+.ERPMenuBarCurve af|menu::bar-item-icon-style
+{
+width: 30px;
+height: 30px;
+padding-top: 0px;
+padding-bottom: 0px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+}
+
+
+
+.ERPMenuBarCurve af|menu::bar-item-text
+{
+font-weight: bold;    
+}
+
+.ERPLoginUserImageCurve
+{
+     border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width:40px;
+    height:40px;
+}
+.ERPAboutPage af|decorativeBox::center
+{
+    padding-top: 0px;
+    background-image: none;
+    background-color: #4a85c5;
+}
+
+.ERPAboutImage
+{
+width: 130px;
+height: 130px;
+padding-top: 0px;
+padding-bottom: 0px;
+border-bottom-left-radius: 50px;
+border-bottom-right-radius: 50px;
+border-top-left-radius: 50px;
+border-top-right-radius: 50px;
+}
+
+.ERPAboutUserNameFont
+{
+font-size:20px;
+color:white;
+font-weight: bolder;
+font-family: sans-serif;
+}
+
+.ERPAboutOtherInfoFont
+{
+font-size:10px;
+color:black;
+font-weight: bolder;
+font-family: sans-serif;
+color:#4a85c5;
+}
+
+.ERPAboutOtherInfoLabel
+{
+font-family: sans-serif;
+font-weight: bolder;
+color: #e4e3ff;
+}
