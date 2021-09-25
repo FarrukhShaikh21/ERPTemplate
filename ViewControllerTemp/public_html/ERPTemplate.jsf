@@ -395,7 +395,7 @@ function hidePopup(evt){
                                     <af:facetRef facetName="ERPMain"/>
                                 </f:facet>
                                 <f:facet name="top">
-                                    <af:panelGridLayout id="pt_pgl3" rendered="false">
+                                    <af:panelGridLayout id="pt_pgl3">
                                         <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr2">
                                             <af:gridCell marginStart="5px" width="30%" id="pt_gc2" halign="stretch"
                                                          valign="stretch">
