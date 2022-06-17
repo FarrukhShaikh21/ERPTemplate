@@ -336,7 +336,8 @@ private String[][] lERPModuleActionRights=new String[12][];
             doSetErpActivityRights(getOTERPModuleAction().getValue().toString()); //
         } catch (Exception e) {
             // TODO: Add catch code
-            ERPGlobalsClass.doShowERPMessage("You Don't Have Rights on This Activity.", FacesMessage.SEVERITY_INFO);
+            e.printStackTrace();
+            ERPGlobalsClass.doShowERPMessage("You Don't Have Rights on This Activity. ", FacesMessage.SEVERITY_INFO);
             return null;
             
         }
@@ -351,7 +352,7 @@ private String[][] lERPModuleActionRights=new String[12][];
             System.out.println("this-is-doGetTransActivity--finish");
         } catch (Exception e) {
             // TODO: Add catch code
-            ERPGlobalsClass.doShowERPMessage("You Don't Have Rights on This Activity.", FacesMessage.SEVERITY_INFO);
+            ERPGlobalsClass.doShowERPMessage("You Don't Have Rights on This Activity."+e.getMessage(), FacesMessage.SEVERITY_INFO);
             return null;
             
         }
@@ -364,7 +365,7 @@ private String[][] lERPModuleActionRights=new String[12][];
             doSetErpActivityRights(getOTERPModuleAction().getValue().toString()); //
         } catch (Exception e) {
             // TODO: Add catch code
-            ERPGlobalsClass.doShowERPMessage("You Don't Have Rights on This Activity.", FacesMessage.SEVERITY_INFO);
+            ERPGlobalsClass.doShowERPMessage("You Don't Have Rights on This Activity."+e.getMessage(), FacesMessage.SEVERITY_INFO);
             return null;
             
         }
@@ -430,14 +431,14 @@ for (int i = 0; i < lERPModuleActionRights1.length; i++) {
         if (vo != null) {
             vo.remove();
         }
-        System.out.println("this-is-doGetTransActivity-E");
+        System.out.println("this-is-doGetTransActivity-E-V2");
         System.out.println(lERPModuleAction+ "lERPModuleAction");
         System.out.println("SELECT MAX(A.ALLOW_ADD) ALLOW_ADD,MAX(A.ALLOW_DELETE) ALLOW_DELETE,MAX(A.ACTION_RUNTIME) ACTION_RUNTIME,MAX(A.IS_ALLOW) IS_ALLOW,MAX(A.ALLOW_EDIT) ALLOW_EDIT,MAX(A.ALLOW_SUPERVISE) ALLOW_SUPERVISE ,MAX(A.ALLOW_UNSUPERVISE) ALLOW_UNSUPERVISE,MAX(A.ALLOW_CANCEL) ALLOW_CANCEL, MAX(A.ALLOW_EDIT_OTHER) ALLOW_EDIT_OTHER, MAX(A.ALLOW_PRINT) ALLOW_PRINT,MAX(A.SCAN_FILE) SCAN_FILE   FROM VW_SYS_USERS_MODULE A WHERE PK='"+ERPGlobalsClass.doGetUserSno()+"-"+lERPModuleAction+"'");
         vo =
             am.createViewObjectFromQueryStmt("QvoRights",
                                              "SELECT MAX(A.ALLOW_ADD) ALLOW_ADD,MAX(A.ALLOW_DELETE) ALLOW_DELETE,MAX(A.ACTION_RUNTIME) ACTION_RUNTIME,MAX(A.IS_ALLOW) IS_ALLOW,MAX(A.ALLOW_EDIT) ALLOW_EDIT,MAX(A.ALLOW_SUPERVISE) ALLOW_SUPERVISE ,MAX(A.ALLOW_UNSUPERVISE) ALLOW_UNSUPERVISE,MAX(A.ALLOW_CANCEL) ALLOW_CANCEL, MAX(A.ALLOW_EDIT_OTHER) ALLOW_EDIT_OTHER, MAX(A.ALLOW_PRINT) ALLOW_PRINT,MAX(A.SCAN_FILE) SCAN_FILE   FROM VW_SYS_USERS_MODULE A WHERE PK='"+ERPGlobalsClass.doGetUserSno()+"-"+lERPModuleAction+"'");
         vo.executeQuery();
-  
+        System.out.println(vo.getRowCount()+"vo.getRowCount()");
         if (vo.getRowCount()==0) {
             throw new JboException("You Don't Have Rights on This Activity.");
        }
@@ -465,7 +466,7 @@ for (int i = 0; i < lERPModuleActionRights1.length; i++) {
         ADFContext.getCurrent().getPageFlowScope().put("G_ERP_ALLOW_PRINT",lERPAllowPrint);
         this.lERPAllowScan = vo.first().getAttribute(10).toString();
         ADFContext.getCurrent().getPageFlowScope().put("G_ERP_ALLOW_SCAN",lERPAllowScan);
-        System.out.println("-----------finish-------------------");         
+        System.out.println("-----------finish-V2-------------------");         
         /*
         System.out.println(this.lERPAllowAdd + "lERPAllowAdd");
         System.out.println(this.lERPAllowDelete + "lERPAllowDelete");
@@ -473,19 +474,34 @@ for (int i = 0; i < lERPModuleActionRights1.length; i++) {
         
         System.out.println("USER"+ERPGlobalsClass.doGetUserSno());
         */
+        System.out.println("begin");
+        lERPModuleActionRights=new String[12][];
+        System.out.println(lERPModuleActionRights.length + "length");
 //        lERPModuleActionRights[][]=new String[9][];
         lERPModuleActionRights[0]=new String[]{"G_ERP_MODULE_ACTION",lERPModuleAction,"setLERPModuleAction"};
+        System.out.println("A");
         lERPModuleActionRights[1]=new String[]{"G_ERP_ALLOW_ADD", lERPAllowAdd,"setLERPAllowAdd" };
+        System.out.println("B");
         lERPModuleActionRights[2]=new String[]{"G_ERP_ALLOW_DELETE",lERPAllowEdit,"setLERPAllowDelete"};
+        System.out.println("C");
         lERPModuleActionRights[3]=new String[]{"G_ERP_ACTION_RUNTIME",lERPActionRuntime,"setLERPActionRuntime"};    
+        System.out.println("D");
         lERPModuleActionRights[4]=new String[]{"G_ERP_IS_ALLOW",lERPIsAllow,"setLERPIsAllow"};
+        System.out.println("E");
         lERPModuleActionRights[5]=new String[]{"G_ERP_ALLOW_EDIT",lERPAllowEdit,"setLERPAllowEdit"};
+        System.out.println("F");
         lERPModuleActionRights[6]=new String[]{"G_ERP_ALLOW_SUPERVISE",lERPAllowSupervise,"setLERPAllowSupervise"};    
+        System.out.println("G");
         lERPModuleActionRights[7]=new String[]{"G_ERP_ALLOW_UNSUPERVISE",lERPAllowUnsupervise,"setLERPAllowUnsupervise"};    
+        System.out.println("H");
         lERPModuleActionRights[8]=new String[]{"G_ERP_ALLOW_CANCEL",lERPAllowCancel,"setLERPAllowCancel"};    
+        System.out.println("I");
         lERPModuleActionRights[9]=new String[]{"G_ERP_ALLOW_EDIT_OTHER",lERPAllowEditOther,"setLERPAllowEditOther"};    
+        System.out.println("J");
         lERPModuleActionRights[10]=new String[]{"G_ERP_ALLOW_PRINT",lERPAllowPrint,"setLERPAllowPrint"};    
+        System.out.println("K");
         lERPModuleActionRights[11]=new String[]{"G_ERP_ALLOW_SCAN",lERPAllowScan,"setLERPAllowScan"};
+        System.out.println("L");
  
         
        
@@ -494,7 +510,6 @@ for (int i = 0; i < lERPModuleActionRights1.length; i++) {
 
     public Integer getERPUserId() {
         System.out.println("template getERPUserId");
-//       return 1;
         return ERPGlobalsClass.doGetUserSno();
     }
 
