@@ -388,35 +388,35 @@ function hidePopup(evt){
                     </af:panelAccordion>
                 </f:facet>
                 <f:facet name="second">
-                    <af:decorativeBox id="pt_db1" dimensionsFrom="parent">
+                    <af:decorativeBox id="pt_db2" topHeight="33px">
                         <f:facet name="center">
-                            <af:decorativeBox id="pt_db2" dimensionsFrom="parent">
-                                <f:facet name="center">
-                                    <af:facetRef facetName="ERPMain"/>
-                                </f:facet>
-                                <f:facet name="top">
-                                    <af:panelGridLayout id="pt_pgl3">
-                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr2">
-                                            <af:gridCell marginStart="5px" width="30%" id="pt_gc2" halign="stretch"
-                                                         valign="stretch">
-                                                <af:outputText value="#{pageFlowScope.ERPMainTempBean.LErpActivityName}"
-                                                               id="pt_ot1" inlineStyle="font-weight:bold"
-                                                               truncateAt="0"/>
-                                            </af:gridCell>
-                                            <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="pt_gc4"
-                                                         halign="end" valign="stretch">
-                                                <af:facetRef facetName="ERPToolbar"/>
-                                            </af:gridCell>
-                                        </af:gridRow>
-                                    </af:panelGridLayout>
-                                </f:facet>
-                            </af:decorativeBox>
+                            <af:facetRef facetName="ERPMain"/>
+                        </f:facet>
+                        <f:facet name="top">
+                            <af:panelGridLayout id="pt_pgl3">
+                                <af:gridRow height="100%" id="pt_gr2">
+                                    <af:gridCell marginStart="5px" width="30%" id="pt_gc2"
+                                                 valign="middle">
+                                        <af:outputText value="#{pageFlowScope.ERPMainTempBean.LErpActivityName}"
+                                                       id="pt_ot1" inlineStyle="font-weight:bold" truncateAt="0"/>
+                                    </af:gridCell>
+                                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="pt_gc4"
+                                                 halign="end"
+                                                 valign="middle">
+                                        <af:facetRef facetName="ERPToolbar"/>
+                                    </af:gridCell>
+                                </af:gridRow>
+                            </af:panelGridLayout>
                         </f:facet>
                     </af:decorativeBox>
                 </f:facet>
             </af:panelSplitter>
         </f:facet>
-        <f:facet name="start"/>
+        <f:facet name="start">
+            <af:decorativeBox id="pt_db1" rendered="false">
+                <f:facet name="center"/>
+            </af:decorativeBox>
+        </f:facet>
         <f:facet name="end"/>
         <f:facet name="top">
             <af:panelGridLayout id="pt_pgl7" dimensionsFrom="parent" styleClass="ERPTemplateHeader">
